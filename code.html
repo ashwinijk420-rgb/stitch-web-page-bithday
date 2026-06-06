@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Happy Birthday, My Love | Midnight Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c6c6ca",
+                        "surface-container-lowest": "#0c0e13",
+                        "background": "#111318",
+                        "inverse-surface": "#e2e2e8",
+                        "on-tertiary-fixed": "#191c1d",
+                        "on-secondary-container": "#342800",
+                        "tertiary-fixed": "#e1e3e4",
+                        "surface-container-high": "#282a2f",
+                        "surface-container-low": "#191c20",
+                        "on-surface-variant": "#c6c6ca",
+                        "on-background": "#e2e2e8",
+                        "surface-bright": "#37393e",
+                        "surface-tint": "#c6c6ca",
+                        "on-surface": "#e2e2e8",
+                        "primary": "#c6c6ca",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#7c7f80",
+                        "inverse-primary": "#5d5e62",
+                        "surface-container-highest": "#33353a",
+                        "secondary": "#e9c349",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-primary-container": "#7d7e82",
+                        "surface-dim": "#111318",
+                        "on-primary-fixed-variant": "#45474a",
+                        "error-container": "#93000a",
+                        "surface-variant": "#33353a",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface": "#111318",
+                        "secondary-container": "#af8d11",
+                        "outline-variant": "#45474a",
+                        "primary-container": "#121417",
+                        "on-primary": "#2f3034",
+                        "secondary-fixed": "#ffe088",
+                        "outline": "#8f9094",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#111415",
+                        "on-secondary": "#3c2f00",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "tertiary": "#c5c7c8",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2e3035",
+                        "primary-fixed": "#e2e2e6",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary": "#2e3132",
+                        "surface-container": "#1d2024",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-primary-fixed": "#1a1c1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "base": "8px",
+                        "margin-mobile": "24px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "300"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .floral-divider {
+            height: 60px;
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='60' viewBox='0 0 200 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 30C50 30 70 10 100 30C130 50 150 30 180 30' stroke='%2345474a' stroke-width='1'/%3E%3Cpath d='M95 25C95 25 100 20 105 25C110 30 100 35 100 35C100 35 90 30 95 25Z' fill='%23e9c349'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .gold-foil-button {
+            background: linear-gradient(135deg, #ffe088 0%, #e9c349 50%, #af8d11 100%);
+            box-shadow: 0 4px 15px rgba(233, 195, 73, 0.2);
+            color: #1a1c1f;
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background: rgba(29, 32, 36, 0.7);
+        }
+        .floating-petals {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .petal {
+            position: absolute;
+            background-color: #e9c349;
+            border-radius: 150% 0 150% 0;
+            opacity: 0.15;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+        
+        /* Floating Hearts Animation */
+        .heart-float {
+            position: absolute;
+            background-color: #ff85a2;
+            opacity: 0.3;
+            transform: rotate(-45deg);
+            pointer-events: none;
+            z-index: 1;
+            animation: float-up linear forwards;
+        }
+        .heart-float::before,
+        .heart-float::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 50%;
+        }
+        .heart-float::before {
+            top: -50%;
+            left: 0;
+        }
+        .heart-float::after {
+            top: 0;
+            left: 50%;
+        }
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(-45deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(-45deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111318;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #33353a;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #45474a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-secondary italic tracking-tight">Happy Birthday, My Love</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary uppercase tracking-widest transition-colors duration-300" href="#story">Our Story</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary uppercase tracking-widest transition-colors duration-300" href="#memories">Memories</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary uppercase tracking-widest transition-colors duration-300" href="#notes">Love Notes</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary uppercase tracking-widest transition-colors duration-300" href="#gift">Milestones</a>
+<button class="gold-foil-button font-label-sm px-8 py-2.5 rounded-full uppercase tracking-widest transition-all duration-300 hover:scale-105">Gift for You</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-secondary">menu</span>
+</div>
+</nav>
+</header>
+<main class="relative">
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-[1]" id="heart-container"></div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+<div class="floating-petals" id="petal-container"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center z-10">
+<div class="order-2 lg:order-1 text-center lg:text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.4em] text-secondary mb-6 block">A Midnight Celebration</span>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-8 leading-tight">Happy Birthday,<br/><span class="text-secondary italic">My Beautiful Wife</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto lg:mx-0">
+                        To the woman who makes every day feel like a celebration. Your grace, your laughter, and your boundless love are the greatest gifts I have ever received. Today is all about you.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+<a class="gold-foil-button font-label-sm px-12 py-4 rounded-full uppercase tracking-[0.2em] text-center transition-all duration-300 hover:scale-105" href="#story">View Our Story</a>
+<a class="border border-outline-variant text-on-surface font-label-sm px-12 py-4 rounded-full uppercase tracking-[0.2em] text-center hover:bg-white/5 transition-all" href="#gift">A Special Surprise</a>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="relative w-full aspect-[4/6] rounded-[0.5rem] overflow-hidden shadow-2xl border-[1px] border-outline-variant/30 ring-8 ring-surface-container-low/50">
+<img alt="Romantic Portrait" class="w-full h-full object-cover" src="assets/images/hero_portrait.jpg"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-secondary-container rounded-full flex items-center justify-center p-8 text-center animate-pulse hidden md:flex shadow-2xl">
+<p class="font-headline-md text-on-secondary-container leading-none italic">I Love You</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Countdown Section -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Counting Down to Your Special Day</h2>
+<p class="font-label-sm text-secondary uppercase tracking-[0.3em] mb-12">June 12th, 2026</p>
+<p class="font-body-md text-on-surface-variant mb-12 max-w-xl mx-auto italic">Every second brings us closer to celebrating the most amazing woman I know.</p>
+<div class="flex justify-center gap-6 md:gap-12">
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg mb-4">
+<span class="text-headline-xl text-secondary font-light" id="days">00</span>
+</div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Days</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg mb-4">
+<span class="text-headline-xl text-secondary font-light" id="hours">00</span>
+</div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Hours</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg mb-4">
+<span class="text-headline-xl text-secondary font-light" id="minutes">00</span>
+</div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Mins</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-lg bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg mb-4">
+<span class="text-headline-xl text-secondary font-light" id="seconds">00</span>
+</div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Secs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Floral Divider -->
+<div class="floral-divider my-24 opacity-50"></div>
+<!-- Our Story (Timeline) -->
+<section class="py-24 bg-background" id="story">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-24">
+<span class="font-label-sm text-secondary uppercase tracking-[0.4em] mb-4 block">Chapter by Chapter</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Our Story</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto italic">From the very first moment to the lifetime we are building together.</p>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 -translate-x-1/2 h-full w-px bg-outline-variant/30 hidden md:block"></div>
+<div class="space-y-32">
+<!-- Event 1 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-right hidden md:block pr-16">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 13, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-3">Texted First Time</h3>
+<p class="text-on-surface-variant mt-4 italic font-light leading-relaxed">Both travelling from belgaum in different bus and out same snaps after started texts</p>
+</div>
+<div class="w-14 h-14 rounded-full bg-surface-container-highest border-2 border-secondary/30 z-10 flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-secondary text-base">favorite</span>
+</div>
+<div class="flex-1 md:pl-16">
+<div class="md:hidden mb-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 13, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-2">Texted First Time</h3>
+</div>
+<div class="w-full aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="Meeting Place" class="w-full h-full object-cover object-top grayscale-[0.2] transition-transform duration-1000 hover:scale-105" src="assets/images/story_first_text.jpeg"/>
+</div>
+<p class="md:hidden mt-6 text-on-surface-variant italic font-light leading-relaxed">Both travelling from belgaum in different bus and out same snaps after started texts</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12">
+<div class="flex-1 text-left hidden md:block pl-16">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 14, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-3">The Matchmaking Day</h3>
+<p class="text-on-surface-variant mt-4 italic font-light leading-relaxed">After talking with you, I realized you're the person I've been searching for my entire life.</p>
+</div>
+<div class="w-14 h-14 rounded-full bg-surface-container-highest border-2 border-secondary/30 z-10 flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+</div>
+<div class="flex-1 md:pr-16">
+<div class="md:hidden mb-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 14, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-2">The Matchmaking Day</h3>
+</div>
+<div class="w-full aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="Wedding Scene" class="w-full h-full object-cover object-top grayscale-[0.2] transition-transform duration-1000 hover:scale-105" src="assets/images/story_matchmaking.jpeg"/>
+</div>
+<p class="md:hidden mt-6 text-on-surface-variant italic font-light leading-relaxed">After talking with you, I realized you're the person I've been searching for my entire life.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-right hidden md:block pr-16">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 28, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-3">First Outing Together</h3>
+<p class="text-on-surface-variant mt-4 italic font-light leading-relaxed">Exploring new horizons and creating memories that will last a lifetime.</p>
+</div>
+<div class="w-14 h-14 rounded-full bg-surface-container-highest border-2 border-secondary/30 z-10 flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-secondary text-base">flight_takeoff</span>
+</div>
+<div class="flex-1 md:pl-16">
+<div class="md:hidden mb-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">July 28, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-2">First Outing Together</h3>
+</div>
+<div class="w-full aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="First Trip" class="w-full h-full object-cover object-[center_-70px] grayscale-[0.2] transition-transform duration-1000 hover:scale-105" src="assets/images/story_first_outing.jpeg"/>
+</div>
+<p class="md:hidden mt-6 text-on-surface-variant italic font-light leading-relaxed">Exploring new horizons and creating memories that will last a lifetime.</p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12">
+<div class="flex-1 text-left hidden md:block pl-16">
+<span class="font-label-sm text-secondary uppercase tracking-widest">August 31, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-3">Got Engaged</h3>
+<p class="text-on-surface-variant mt-4 italic font-light leading-relaxed">Starting the year with a promise to always grow and dream together. We got engaged!</p>
+</div>
+<div class="w-14 h-14 rounded-full bg-surface-container-highest border-2 border-secondary/30 z-10 flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+</div>
+<div class="flex-1 md:pr-16">
+<div class="md:hidden mb-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">August 31, 2024</span>
+<h3 class="font-headline-md text-on-surface mt-2">Got Engaged</h3>
+</div>
+<div class="w-full aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="Future Together" class="w-full h-full object-cover object-top grayscale-[0.2] transition-transform duration-1000 hover:scale-105" src="assets/images/story_engaged.jpeg"/>
+</div>
+<p class="md:hidden mt-6 text-on-surface-variant italic font-light leading-relaxed">Starting the year with a promise to always grow and dream together.</p>
+</div>
+</div>
+<!-- Event 5 -->
+<div class="relative flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-right hidden md:block pr-16">
+<span class="font-label-sm text-secondary uppercase tracking-widest">May 08, 2025</span>
+<h3 class="font-headline-md text-on-surface mt-3">Our Marriage</h3>
+<p class="text-on-surface-variant mt-4 italic font-light leading-relaxed">The day we promised to be mine, and I promised to protect your smile. Our journey as one began.</p>
+</div>
+<div class="w-14 h-16 rounded-full bg-surface-container-highest border-2 border-secondary/30 z-10 flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-secondary text-base">home</span>
+</div>
+<div class="flex-1 md:pl-16">
+<div class="md:hidden mb-4">
+<span class="font-label-sm text-secondary uppercase tracking-widest">May 08, 2025</span>
+<h3 class="font-headline-md text-on-surface mt-2">Our Marriage</h3>
+</div>
+<div class="w-full aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="Our First Home" class="w-full h-full object-cover object-[center_-60px] grayscale-[0.2] transition-transform duration-1000 hover:scale-105" src="assets/images/story_marriage.jpeg"/>
+</div>
+<p class="md:hidden mt-6 text-on-surface-variant italic font-light leading-relaxed">The day we turned a house into our home, starting a new chapter of comfort and love.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Memories Gallery -->
+<section class="py-24 bg-surface-container-low" id="memories">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Captured Moments</h2>
+<div class="flex justify-center gap-3">
+
+</div>
+</div>
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 1" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/20251102_210708.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 2" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/20260215_114515.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 3" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/20260319_185840.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 4" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/20260411_215409.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 5" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20240716-WA0000.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 6" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20240821-WA0050.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 7" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20240902-WA0009.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 8" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20241011-WA0004.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 9" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20241101-WA0030.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 10" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20241106-WA0003.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 11" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20241117-WA0021.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 12" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20241202-WA0009.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 13" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20250201-WA0026.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 14" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/IMG-20250209-WA0011.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 15" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/PXL_20240728_084959671.MP.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 16" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/PXL_20250427_110848096.MP.jpg"/>
+</div>
+<div class="relative rounded-lg overflow-hidden group shadow-2xl border border-outline-variant/10">
+<img alt="Memory 17" class="w-full grayscale-[0.3] transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-0" src="assets/images/PXL_20250808_133941962.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Love Notes Section -->
+<section class="py-24 bg-surface-container-low" id="notes">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-24 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-12 italic">5 Reasons Why<br/><span class="text-secondary">I Love You</span></h2>
+<div class="space-y-10">
+<div class="flex gap-8 group">
+<div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-highest border border-secondary/30 shadow-xl text-secondary font-headline-md italic group-hover:scale-110 transition-transform">1</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-2">Your Kind Soul</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed font-light">You see the best in everyone, and you inspire me to be a better man every single day.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-highest border border-secondary/30 shadow-xl text-secondary font-headline-md italic group-hover:scale-110 transition-transform">2</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-2">The Way You Laugh</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed font-light">It's my favorite sound in the world. It lights up the darkest rooms and heals my spirit.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-highest border border-secondary/30 shadow-xl text-secondary font-headline-md italic group-hover:scale-110 transition-transform">3</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-2">Your Strength</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed font-light">You handle everything life throws at us with such poise and unwavering courage.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-highest border border-secondary/30 shadow-xl text-secondary font-headline-md italic group-hover:scale-110 transition-transform">4</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-2">Our Adventures</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed font-light">Whether we're traveling the world or just grocery shopping, life is better with you by my side.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-highest border border-secondary/30 shadow-xl text-secondary font-headline-md italic group-hover:scale-110 transition-transform">5</div>
+<div>
+<h4 class="font-headline-md text-on-surface mb-2">You Are You</h4>
+<p class="text-on-surface-variant font-body-md leading-relaxed font-light">Simply for being the amazing, unique person you are. There is no one like you.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative w-full">
+<div class="glass-card p-16 rounded-lg border border-outline-variant/20 shadow-2xl relative z-10">
+<span class="material-symbols-outlined text-secondary/10 text-9xl absolute -top-4 -left-4">format_quote</span>
+<blockquote class="font-headline-md text-headline-md italic text-secondary leading-relaxed text-center">
+                                "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+                            </blockquote>
+</div>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-surface-container-highest/50 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- RSVP/Gift Section -->
+<section class="py-32 relative overflow-hidden bg-background" id="gift">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<div class="inline-block p-6 rounded-full bg-surface-container-highest border border-secondary/20 mb-10">
+<span class="material-symbols-outlined text-secondary text-5xl" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8">A Birthday Surprise Awaits</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16 italic font-light">
+                    I've planned a little something special for you tonight. Click below to reveal the location of our birthday celebration.
+                </p>
+<div class="max-w-md mx-auto">
+<button class="gold-foil-button w-full font-label-sm py-6 rounded-full uppercase tracking-[0.3em] transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl" id="reveal-btn">
+                        Reveal the Surprise
+                    </button>
+<div class="hidden mt-12 p-12 border border-secondary/30 rounded-lg bg-surface-container-low shadow-2xl transition-all duration-700 transform scale-95 opacity-0" id="reveal-content">
+<h4 class="font-headline-md text-secondary mb-6 italic">Tonight at 8:00 PM</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed font-light">Pack your favorite evening dress. We're heading to the rooftop terrace of <span class="text-on-surface font-medium">The Grand Orchid</span> for a private dinner under the stars.</p>
+<div class="flex items-center justify-center gap-3 text-secondary font-label-sm uppercase tracking-widest cursor-pointer hover:underline">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>View on Map</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col items-center gap-8 w-full max-w-container-max mx-auto px-margin-mobile">
+<div class="font-headline-md text-headline-md text-secondary italic tracking-tight">Happy Birthday, My Love</div>
+<nav class="flex gap-12">
+<a class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="#">Our Song</a>
+<a class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Me</a>
+</nav>
+<div class="w-32 h-px bg-outline-variant/20"></div>
+<p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant/60">Forever Yours, with all my love.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Reveal Surprise
+        const revealBtn = document.getElementById('reveal-btn');
+        const revealContent = document.getElementById('reveal-content');
+
+        revealBtn.addEventListener('click', () => {
+            revealContent.classList.remove('hidden');
+            setTimeout(() => {
+                revealContent.classList.remove('scale-95', 'opacity-0');
+                revealContent.classList.add('scale-100', 'opacity-100');
+            }, 50);
+            revealBtn.innerHTML = "See You There ❤️";
+            revealBtn.classList.replace('gold-foil-button', 'bg-surface-container-highest');
+            revealBtn.classList.add('text-secondary', 'border', 'border-secondary/30');
+            revealBtn.style.background = 'none';
+        });
+
+        // Atmospheric Effect: Falling Petals
+        const container = document.getElementById('petal-container');
+        const petalCount = 15;
+
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            
+            const size = Math.random() * 10 + 8;
+            petal.style.width = `${size}px`;
+            petal.style.height = `${size}px`;
+            
+            petal.style.left = `${Math.random() * 100}vw`;
+            petal.style.animationDuration = `${Math.random() * 12 + 8}s`;
+            petal.style.animationDelay = `${Math.random() * 5}s`;
+            
+            container.appendChild(petal);
+            
+            petal.addEventListener('animationend', () => {
+                petal.remove();
+                createPetal();
+            });
+        }
+
+        for (let i = 0; i < petalCount; i++) {
+            createPetal();
+        }
+
+        // Atmospheric Effect: Floating Hearts
+        const heartContainer = document.getElementById('heart-container');
+        
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart-float';
+            
+            const size = Math.random() * 40 + 30;
+            heart.style.width = `${size}px`;
+            heart.style.height = `${size}px`;
+            
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 15 + 10}s`;
+            
+            heartContainer.appendChild(heart);
+            
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+        }
+
+        // Initial batch and continuous generation
+        for (let i = 0; i < 10; i++) {
+            setTimeout(createHeart, Math.random() * 10000);
+        }
+        setInterval(createHeart, 3000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Countdown Timer Logic
+        const targetDate = new Date("June 12, 2026 00:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days.toString().padStart(2, '0');
+                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body></html>
