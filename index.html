@@ -540,18 +540,47 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16 italic font-light">
                     I've planned a little something special for you tonight. Click below to reveal the location of our birthday celebration.
                 </p>
-<div class="max-w-md mx-auto">
-<button class="gold-foil-button w-full font-label-sm py-6 rounded-full uppercase tracking-[0.3em] transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl" id="reveal-btn">
-                        Reveal the Surprise
-                    </button>
-<div class="hidden mt-12 p-12 border border-secondary/30 rounded-lg bg-surface-container-low shadow-2xl transition-all duration-700 transform scale-95 opacity-0" id="reveal-content">
-<h4 class="font-headline-md text-secondary mb-6 italic">Tonight at 8:00 PM</h4>
-<p class="text-on-surface-variant mb-8 leading-relaxed font-light">Pack your favorite evening dress. It's a <span class="text-on-surface font-medium">beach side dinner under stars</span> at HOOK LOUNGE, Puducherry.</p>
-<a href="https://maps.app.goo.gl/fwRiw9sDN2DFhzj97" target="_blank" class="flex items-center justify-center gap-3 text-secondary font-label-sm uppercase tracking-widest cursor-pointer hover:underline">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>View on Map</span>
-</a>
-</div>
+<div class="max-w-4xl mx-auto">
+    <button class="gold-foil-button max-w-md mx-auto block w-full font-label-sm py-6 rounded-full uppercase tracking-[0.3em] transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl" id="reveal-btn">
+        Reveal the Surprise
+    </button>
+    <div class="hidden mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-700 transform scale-95 opacity-0" id="reveal-content">
+        <!-- Box 1: Barbeque Nation -->
+        <div class="p-10 border border-secondary/30 rounded-2xl bg-surface-container-low shadow-2xl flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary">celebration</span>
+                </div>
+                <div>
+                    <h4 class="font-headline-md text-secondary italic">Today at 1:00 PM</h4>
+                    <span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Birthday Lunch</span>
+                </div>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed font-light mb-8 flex-grow">Kickstarting the day with a cake cutting and grand feast. Enjoy a <span class="text-on-surface font-medium">delightful buffet lunch</span> at Barbeque Nation, Puducherry.</p>
+            <a href="https://maps.app.goo.gl/JFwNtk5DeQKnMraL9" target="_blank" class="flex items-center gap-2 text-secondary font-label-sm uppercase tracking-widest hover:underline group pt-4 border-t border-outline-variant/20">
+                <span>View on Map</span>
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">open_in_new</span>
+            </a>
+        </div>
+
+        <!-- Box 2: Hook Lounge -->
+        <div class="p-10 border border-secondary/30 rounded-2xl bg-surface-container-low shadow-2xl flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary">restaurant</span>
+                </div>
+                <div>
+                    <h4 class="font-headline-md text-secondary italic">Tonight at 8:00 PM</h4>
+                    <span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Main Celebration</span>
+                </div>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed font-light mb-8 flex-grow">Pack your favorite evening dress. It's a <span class="text-on-surface font-medium">beach side dinner under stars</span> at HOOK LOUNGE, Puducherry.</p>
+            <a href="https://maps.app.goo.gl/fwRiw9sDN2DFhzj97" target="_blank" class="flex items-center gap-2 text-secondary font-label-sm uppercase tracking-widest hover:underline group pt-4 border-t border-outline-variant/20">
+                <span>View on Map</span>
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">open_in_new</span>
+            </a>
+        </div>
+    </div>
 </div>
 </div>
 </section>
